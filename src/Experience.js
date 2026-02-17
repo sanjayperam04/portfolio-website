@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Experience.css';
+import ContactForm from './ContactForm';
 import menuBg from './assets/menu-bg.jpg';
 
 const experienceItems = [
@@ -52,6 +53,7 @@ function Experience() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [contactFormOpen, setContactFormOpen] = useState(false);
   const [timelineProgress, setTimelineProgress] = useState(0);
   const [visibleItems, setVisibleItems] = useState(new Set());
   const [headerVisible, setHeaderVisible] = useState(false);
@@ -194,8 +196,11 @@ function Experience() {
           <button className="menu-btn" onClick={() => setMenuOpen(true)}>
             <span className="menu-icon">≡</span> Menu
           </button>
-          <a href="mailto:sanjayperam2604@gmail.com" className="contact-btn">Contact</a>
+          <button className="contact-btn" onClick={() => setContactFormOpen(true)}>Contact</button>
         </header>
+
+        {/* Contact Form Modal */}
+        <ContactForm isOpen={contactFormOpen} onClose={() => setContactFormOpen(false)} />
 
         <main className="experience-hero">
           <div className="experience-hero-content">

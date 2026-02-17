@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './About.css';
+import ContactForm from './ContactForm';
 import profileImage from './assets/profile.jpg';
 import photo1 from './assets/photo1.jpg';
 import photo2 from './assets/photo2.jpg';
@@ -21,6 +22,7 @@ function About() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [contactFormOpen, setContactFormOpen] = useState(false);
 
   const handleProjectsClick = (e) => {
     e.preventDefault();
@@ -73,8 +75,11 @@ function About() {
           <button className="menu-btn" onClick={() => setMenuOpen(true)}>
             <span className="menu-icon">≡</span> Menu
           </button>
-          <a href="mailto:sanjayperam2604@gmail.com" className="contact-btn">Contact</a>
+          <button className="contact-btn" onClick={() => setContactFormOpen(true)}>Contact</button>
         </header>
+
+        {/* Contact Form Modal */}
+        <ContactForm isOpen={contactFormOpen} onClose={() => setContactFormOpen(false)} />
 
         <main className="about-hero">
           <div className="about-hero-content">

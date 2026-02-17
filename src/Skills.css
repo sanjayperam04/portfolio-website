@@ -25,11 +25,12 @@
 }
 
 .skills-title {
-  font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 400;
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: 500;
   line-height: 1.1;
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  font-family: 'Geist', sans-serif;
   color: #fff;
 }
 

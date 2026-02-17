@@ -8,8 +8,8 @@ const projects = [
   {
     id: 1,
     name: 'LegalGPT',
-    badge: 'AI-Powered Legal Assistant',
-    tag: 'DEVELOPMENT',
+    badge: null,
+    tag: 'AI-POWERED LEGAL ASSISTANT',
     image: projectImage1,
     link: 'https://github.com/sanjayperam04/LEGAL-GPT'
   },
@@ -17,7 +17,7 @@ const projects = [
     id: 2,
     name: 'Stat IQ',
     badge: null,
-    tag: 'DEVELOPMENT',
+    tag: 'AUTOMATED BUSINESS INTELLIGENCE TOOL',
     image: projectImage2,
     link: 'https://github.com/sanjayperam04/Stat-IQ'
   },
@@ -25,7 +25,7 @@ const projects = [
     id: 3,
     name: 'Review Pilot',
     badge: null,
-    tag: 'DEVELOPMENT',
+    tag: 'AI-POWERED CODE REVIEWER',
     image: projectImage3,
     link: 'https://github.com/sanjayperam04/review-pilot'
   },

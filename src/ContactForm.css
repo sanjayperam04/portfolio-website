@@ -1,0 +1,232 @@
+/* Contact Modal Overlay */
+.contact-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Contact Modal */
+.contact-modal {
+  background-color: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #888888;
+  font-size: 32px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.contact-close-btn:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.close-icon {
+  line-height: 1;
+}
+
+/* Modal Content */
+.contact-modal-content {
+  padding: 60px 50px 50px 50px;
+}
+
+.contact-modal-title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 500;
+  color: #ffffff;
+  font-family: 'Geist', sans-serif;
+  letter-spacing: -0.03em;
+  margin: 0 0 16px 0;
+  line-height: 1.1;
+}
+
+.contact-modal-subtitle {
+  font-size: clamp(16px, 2vw, 18px);
+  color: #888888;
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  margin: 0 0 40px 0;
+  line-height: 1.6;
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #cccccc;
+  font-family: 'Geist', sans-serif;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.form-input,
+.form-textarea {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 16px;
+  color: #ffffff;
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #555555;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.form-submit-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 24px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Geist', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+  letter-spacing: -0.01em;
+}
+
+.form-submit-btn:hover:not(:disabled) {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+}
+
+.form-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-error {
+  color: #ff6b6b;
+  font-size: 14px;
+  font-family: 'Geist', sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-modal {
+    border-radius: 12px;
+    max-height: 95vh;
+  }
+
+  .contact-modal-content {
+    padding: 50px 30px 40px 30px;
+  }
+
+  .contact-close-btn {
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    font-size: 28px;
+  }
+
+  .contact-modal-title {
+    font-size: clamp(28px, 7vw, 36px);
+  }
+
+  .contact-modal-subtitle {
+    font-size: clamp(14px, 3.5vw, 16px);
+    margin-bottom: 32px;
+  }
+
+  .contact-form {
+    gap: 20px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  .form-submit-btn {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+}

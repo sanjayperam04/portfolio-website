@@ -6,6 +6,7 @@ import Experience from './Experience';
 import Loader from './Loader';
 import SelectedWorks from './SelectedWorks';
 import Skills from './Skills';
+import ContactForm from './ContactForm';
 import menuBg from './assets/menu-bg.jpg';
 
 const roles = [
@@ -44,6 +45,7 @@ function HomePage() {
   const [scrollOpacity, setScrollOpacity] = useState(1);
   const [headerVisible, setHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [contactFormOpen, setContactFormOpen] = useState(false);
 
   // Handle navigation from other pages to scroll to projects
   useEffect(() => {
@@ -143,8 +145,11 @@ function HomePage() {
         <button className="menu-btn" onClick={() => setMenuOpen(true)}>
           <span className="menu-icon">≡</span> Menu
         </button>
-        <a href="mailto:sanjayperam2604@gmail.com" className="contact-btn">Contact</a>
+        <button className="contact-btn" onClick={() => setContactFormOpen(true)}>Contact</button>
       </header>
+
+      {/* Contact Form Modal */}
+      <ContactForm isOpen={contactFormOpen} onClose={() => setContactFormOpen(false)} />
 
       {/* Main Content */}
       <div className={`main-content ${menuOpen ? 'menu-active' : ''}`}>
