@@ -322,12 +322,14 @@
   right: 0;
   bottom: 0;
   background-color: transparent;
+  display: flex;
 }
 
 .carousel-track {
   display: flex;
   height: 100%;
-  animation: slideshow 20s linear infinite;
+  animation: slideshow 12s linear infinite;
+  flex-shrink: 0;
 }
 
 .carousel-photo {
@@ -340,7 +342,7 @@
 
 @keyframes slideshow {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);

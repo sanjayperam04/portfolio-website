@@ -161,9 +161,14 @@ function About() {
             </div>
             <div className="photo-carousel">
               <div className="carousel-track">
-                {[photo1, photo2, photo3, photo1, photo2, photo3].map((photo, index) => (
-                  <img key={index} src={photo} alt={`Photography ${index + 1}`} className="carousel-photo" />
-                ))}
+                <img src={photo1} alt="Photography 1" className="carousel-photo" />
+                <img src={photo2} alt="Photography 2" className="carousel-photo" />
+                <img src={photo3} alt="Photography 3" className="carousel-photo" />
+              </div>
+              <div className="carousel-track" aria-hidden="true">
+                <img src={photo1} alt="Photography 1" className="carousel-photo" />
+                <img src={photo2} alt="Photography 2" className="carousel-photo" />
+                <img src={photo3} alt="Photography 3" className="carousel-photo" />
               </div>
             </div>
           </div>
