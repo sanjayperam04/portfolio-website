@@ -322,17 +322,12 @@
   right: 0;
   bottom: 0;
   background-color: transparent;
-  display: flex;
-  align-items: stretch;
 }
 
 .carousel-track {
   display: flex;
-  gap: 0;
-  animation: scroll 25s linear infinite;
-  width: fit-content;
   height: 100%;
-  align-items: stretch;
+  animation: slideshow 20s linear infinite;
 }
 
 .carousel-photo {
@@ -340,12 +335,12 @@
   width: auto;
   object-fit: cover;
   flex-shrink: 0;
-  display: block;
+  margin-right: 0;
 }
 
-@keyframes scroll {
+@keyframes slideshow {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
