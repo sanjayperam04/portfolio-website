@@ -71,6 +71,10 @@ function ContactForm({ isOpen, onClose }) {
           </p>
 
           <form onSubmit={handleSubmit} className="contact-form">
+            {/* Hidden field for bot protection */}
+            <input type="hidden" name="access_key" value="f59d1d63-a509-47cc-a787-f8bcbe18b590" />
+            <input type="hidden" name="from_name" value="Portfolio Contact Form" />
+            
             <div className="form-group">
               <label htmlFor="name" className="form-label">Name</label>
               <input
