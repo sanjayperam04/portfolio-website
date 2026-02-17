@@ -38,6 +38,13 @@ function ContactForm({ isOpen, onClose }) {
       });
 
       console.log('Response status:', response.status); // Debug
+      
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('API Error Response:', errorText);
+        throw new Error(`HTTP ${response.status}: ${errorText}`);
+      }
+      
       const result = await response.json();
       console.log('Response data:', result); // Debug
 
