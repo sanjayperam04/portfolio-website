@@ -33,7 +33,8 @@ function ContactForm({ isOpen, onClose }) {
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          subject: `Portfolio Contact from ${formData.name}`
+          subject: `Portfolio Contact from ${formData.name}`,
+          botcheck: '' // Honeypot field - empty means not a bot
         })
       });
 
