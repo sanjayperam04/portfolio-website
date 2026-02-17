@@ -21,6 +21,7 @@ function ContactForm({ isOpen, onClose }) {
     setStatus('sending');
 
     try {
+      console.log('Submitting form...'); // Debug
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
@@ -36,7 +37,9 @@ function ContactForm({ isOpen, onClose }) {
         })
       });
 
+      console.log('Response status:', response.status); // Debug
       const result = await response.json();
+      console.log('Response data:', result); // Debug
 
       if (result.success) {
         setStatus('sent');
@@ -46,10 +49,12 @@ function ContactForm({ isOpen, onClose }) {
           onClose();
         }, 2000);
       } else {
+        console.error('Form submission failed:', result.message); // Debug
         setStatus('error');
         setTimeout(() => setStatus(''), 3000);
       }
     } catch (error) {
+      console.error('Form submission error:', error); // Debug
       setStatus('error');
       setTimeout(() => setStatus(''), 3000);
     }
