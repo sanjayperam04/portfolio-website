@@ -249,18 +249,19 @@ function HomePage() {
             <div className="card-inner">
               <div className="card-header-row">
                 <div className="card-number">(03)</div>
-                <h3 className="card-title">Beyond Technology</h3>
+                <h3 className="card-title">Design & Web Development</h3>
               </div>
               <div className="card-body-row">
                 <div></div>
                 <div className="card-content">
                   <p className="card-desc">
-                    Outside of tech, I pursue photography as a creative outlet, exploring visual storytelling, 
-                    composition, and aesthetics.
+                    Beyond AI, I build professional websites for brands and businesses - combining 
+                    technical execution with visual storytelling. My background in photography 
+                    informs how I approach design: composition, aesthetics, and user experience.
                   </p>
                   <div className="tech-list">
-                    <div className="tech-row"><span>Creative Focus</span><span>Photography & Videography, Visual storytelling & composition, Logo design & brand identity</span></div>
-                    <div className="tech-row"><span>Tools</span><span>Adobe Lightroom, Adobe Illustrator</span></div>
+                    <div className="tech-row"><span>Services</span><span>Landing pages, Business websites, Web applications, Brand identity</span></div>
+                    <div className="tech-row"><span>Tools</span><span>React.js, Next.js, Tailwind CSS, Adobe Lightroom, Adobe Illustrator</span></div>
                   </div>
                 </div>
               </div>
