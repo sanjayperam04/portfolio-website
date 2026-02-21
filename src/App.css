@@ -581,3 +581,39 @@ body {
     font-size: clamp(16px, 4vw, 20px);
   }
 }
+
+/* ========================================
+   CARD CTA BUTTONS
+   ======================================== */
+
+.card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  padding: 12px 24px;
+  background: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Geist', sans-serif;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.card-cta:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .card-cta {
+    margin-top: 24px;
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}

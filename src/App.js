@@ -12,7 +12,6 @@ import menuBg from './assets/menu-bg.jpg';
 const roles = [
   { text: 'Machine Learning Engineer', article: 'a' },
   { text: 'AI Developer', article: 'an' },
-  { text: 'Aspiring Storyteller', article: 'an' },
   { text: 'Passionate Photographer', article: 'a' }
 ];
 
@@ -125,6 +124,15 @@ function HomePage() {
     // Experience is now a separate page, handled by Link component
   };
 
+  const handleCardClick = (cardType) => {
+    if (cardType === 'projects') {
+      const element = document.getElementById('projects');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  };
+
   return (
     <div className="app">
       {/* Menu Background */}
@@ -164,7 +172,7 @@ function HomePage() {
               <span className="cursor"></span>
             </div>
             <p className="description">
-              I ship AI products. From LLMs to full-stack apps, I build what people actually use.
+              I build AI systems and web applications. Outside of tech, I explore visual storytelling through photography.
             </p>
           </div>
         </main>
@@ -218,6 +226,9 @@ function HomePage() {
                     <div className="tech-row"><span>Tools</span><span>Git, GitHub, Postman, Docker</span></div>
                     <div className="tech-row"><span>Databases</span><span>PostgreSQL, MySQL, MongoDB, ChromaDB, PineconeDB</span></div>
                   </div>
+                  <button className="card-cta" onClick={() => handleCardClick('projects')}>
+                    View AI Projects →
+                  </button>
                 </div>
               </div>
             </div>
@@ -241,6 +252,9 @@ function HomePage() {
                     <div className="tech-row"><span>Retrieval & Orchestration</span><span>Vector search, embeddings, reranking, LangChain, LangGraph</span></div>
                     <div className="tech-row"><span>Foundations</span><span>Python-based ML workflows, NLP fundamentals for GenAI systems</span></div>
                   </div>
+                  <Link to="/experience" className="card-cta">
+                    See Experience →
+                  </Link>
                 </div>
               </div>
             </div>
@@ -263,6 +277,9 @@ function HomePage() {
                     <div className="tech-row"><span>Services</span><span>Landing pages, Business websites, Web applications, Brand identity</span></div>
                     <div className="tech-row"><span>Tools</span><span>React.js, Next.js, Tailwind CSS, Adobe Lightroom, Adobe Illustrator</span></div>
                   </div>
+                  <button className="card-cta" onClick={() => setContactFormOpen(true)}>
+                    Hire Me for Web Projects →
+                  </button>
                 </div>
               </div>
             </div>
